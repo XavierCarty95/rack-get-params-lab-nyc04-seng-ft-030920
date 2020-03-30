@@ -26,7 +26,7 @@ class Application
       item_to_add = req.params["item"]
       if  @@item.include?item_to_add
        @@cart << item_to_add
-       res.write "#{cart}"
+       res.write "Yout item is added #{@@cart}"
      else 
        res.write "your item is not found"
       end
