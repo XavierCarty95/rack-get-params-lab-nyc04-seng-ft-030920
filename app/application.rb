@@ -22,6 +22,7 @@ class Application
              res.write "#{item}"
           end
         end
+    
     else
       resp.write "Path Not Found"
     end
