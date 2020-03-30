@@ -28,7 +28,7 @@ class Application
        @@cart << item_to_add
        resp.write "Your item is added #{item_to_add}"
      else 
-       resp.write "Your cart is empty"
+       resp.write ""
       end
     else
       resp.write "Path Not Found"
