@@ -31,7 +31,7 @@ class Application
        res.write "your item is not found"
       end
     else
-      resp.write "Path Not Found"
+      res.write "Path Not Found"
     end
 
     resp.finish
