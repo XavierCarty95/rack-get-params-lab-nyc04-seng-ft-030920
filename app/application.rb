@@ -16,22 +16,22 @@ class Application
       resp.write handle_search(search_term)
     elsif req.path.match(/cart/)
         if @@cart.empty?
-          res.write "cart is empty"
+          resp.write "cart is empty"
         else 
           @@cart.each do |item|
-             res.write "#{item}"
+             resp.write "#{item}"
           end
         end
     elsif req.path.match(/add/)
       item_to_add = req.params["item"]
       if  @@items.include?item_to_add
        @@cart << item_to_add
-       res.write "Yout item is added #{item_to_add}"
+       resp.write "Yout item is added #{item_to_add}"
      else 
-       res.write "your item is not found"
+       resp.write "your item is not found"
       end
     else
-      res.write "Path Not Found"
+      resp.write "Path Not Found"
     end
 
     resp.finish
