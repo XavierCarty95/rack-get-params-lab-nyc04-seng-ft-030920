@@ -29,6 +29,7 @@ class Application
        res.write "#{cart}"
      else 
        res.write "your item is not found"
+      end
     else
       resp.write "Path Not Found"
     end
