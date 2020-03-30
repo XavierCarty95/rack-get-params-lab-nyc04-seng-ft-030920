@@ -22,7 +22,8 @@ class Application
              res.write "#{item}"
           end
         end
-    
+    elsif req.path.match(/add/)
+      item_to_add = se
     else
       resp.write "Path Not Found"
     end
